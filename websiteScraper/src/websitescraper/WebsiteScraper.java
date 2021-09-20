@@ -9,7 +9,7 @@ import org.jsoup.select.Elements;
 
 /**
  *
- * @author Uglybear
+ * @author Harald Purnell
  */
 public class WebsiteScraper {
     
