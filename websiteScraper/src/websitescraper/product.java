@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package websitescraper;
 
 /**
  *
- * @author Uglybear
+ * @author Harald Purnell
  */
 public class product {
     
@@ -36,8 +31,10 @@ public class product {
         return Integer.parseInt(productPrice);
     }
     
-    /* Remove currency symbol and other text from 
-    price and convert price from string to integer */
+    /* 
+    Removes all characters from the price value except the relevant integer value as
+    the priceSorter class doesn't allow for Float, String or Double input.
+    */
     public int getFormattedPrice()
     {
        String subString = productPrice.substring(0, 10);
@@ -45,13 +42,13 @@ public class product {
        // Remove all characters but numbers and spaces 
        String modifiedString = subString.replaceAll("[^0-9.]+", " ");
 
-       // Removes unessecaary spaces
+       // Removes unessential spaces
        String removedSpacing = modifiedString.replace(" ", "");
 
        int i = 0;
        String stringPrice = "";
 
-       // Remove numbers after dot and the dot
+       // Remove numbers after dot and the dot itself 
        while (i < removedSpacing.length())
        {
            if (Character.toString(removedSpacing.charAt(i)).equals("."))
@@ -66,10 +63,6 @@ public class product {
        }
 
        int formattedPrice = Integer.parseInt(stringPrice);
-       //int formattedPrice = stringPrice;
        return formattedPrice;
-    }
-
-    
-    
+    } 
 }
