@@ -2,7 +2,7 @@
 
 ## Overview
 
-Using JSoup, this application will scrape https://videx.comesconnected.com/ for each of the product options avaliable on the webpage and organise by both price ascending and price descending.
+Using JSoup, this application will scrape https://videx.comesconnected.com/ for each of the product options avaliable on the webpage and organise by both price ascending and price descending. Unit testing has been performed using JUnit.
 
 ## Installation
 
